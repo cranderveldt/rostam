@@ -1,0 +1,12 @@
+body {
+  background: #eee;
+}
+#wrapper {
+  max-width: 800px;
+  padding: 15px;
+  margin: 0 auto;
+  background: #FFF;
+}
+#sidebar, #comments, #footer {
+  display: none;
+}
