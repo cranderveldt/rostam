@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 #container {
   @extend .container;
 }
 
 #siderbar {
+=======
+body {
+  background: #eee;
+}
+#wrapper {
+  max-width: 800px;
+  padding: 15px;
+  margin: 0 auto;
+  background: #FFF;
+}
+#sidebar, #comments, #footer {
+>>>>>>> 4a5bc204a7c411436901e5ae103de3d096681882
   display: none;
 }
