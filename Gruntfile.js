@@ -10,13 +10,13 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files : {
-                    'wp-content/themes/ztarget/style.css':'wp-content/themes/ztarget/sass/style.scss'
+                    'wp-content/themes/rostam/style.css':'wp-content/themes/rostam/sass/style.scss'
                 }
             }
         },
         watch: {
             sass: {
-                files: ['wp-content/themes/ztarget/sass/*.scss'],
+                files: ['wp-content/themes/rostam/sass/*.scss'],
                 tasks: ['sass:dev']
             }
         }

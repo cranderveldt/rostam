@@ -1,12 +1,78 @@
 body {
-  background: #eee;
+  background: #DDD;
+  color: #222;
 }
 #wrapper {
-  max-width: 800px;
-  padding: 15px;
-  margin: 0 auto;
-  background: #FFF;
+
 }
-#sidebar, #comments, #footer {
+#header, #sidebar, #comments, #footer, .page > header {
   display: none;
+}
+.tiles {
+  @extend .clearfix;
+  .col-1 {
+    left: 0;
+  }
+  .col-2 {
+    left: 33.3333%;
+  }
+  .col-3 {
+    left: 66.6666%;
+  }
+  .row-1 {
+    top: 0;
+  }
+  .row-2 {
+    top: 50%;
+  }
+  .page-tile {
+    position: absolute;
+    padding: 30px;
+    width: 33.3333%;
+    height: 50%;
+    background: #DDD;
+    @include transition(width, .2s);
+    @include transition(padding, .2s);
+    @include transition(top, .2s);
+    @include transition(left, .2s);
+    @include transition(height, .2s);
+    &:nth-child(2n) {
+      background: #d1d1d1;
+      .content {
+        background: #DDD;
+      }
+    }
+    .content {
+      @include transition(width, .2s);
+      @include transition(max-width, .2s);
+      @include transition(opacity, .2s);
+      opacity: 0;
+      margin: 0 auto;
+      height: 0;
+      overflow: hidden;
+      @include max-width(600px);
+      background: #d1d1d1;
+    }
+    .controls {
+      cursor: pointer;
+    }
+    &.active {
+      padding: 0;
+      float: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      height: auto;
+      .preview {
+        display: none;
+      }
+      .content {
+        opacity: 1;
+        padding: 30px;
+        height: auto;
+      }
+    }
+  }
 }
