@@ -31,11 +31,10 @@ body {
     width: 33.3333%;
     height: 50%;
     background: #DDD;
-    @include transition(width, .2s);
-    @include transition(padding, .2s);
-    @include transition(top, .2s);
-    @include transition(left, .2s);
-    @include transition(height, .2s);
+    -webkit-transition: width .5s linear, height .5s linear, top .5s linear, left .5s linear;
+       -moz-transition: width .5s linear, height .5s linear, top .5s linear, left .5s linear;
+         -o-transition: width .5s linear, height .5s linear, top .5s linear, left .5s linear;
+            transition: width .5s linear, height .5s linear, top .5s linear, left .5s linear;
     &:nth-child(2n) {
       background: #d1d1d1;
       .content {
@@ -46,6 +45,10 @@ body {
       @include transition(width, .2s);
       @include transition(max-width, .2s);
       @include transition(opacity, .2s);
+      -webkit-transition: width .5s linear, max-width .5s linear, opacity .5s linear;
+         -moz-transition: width .5s linear, max-width .5s linear, opacity .5s linear;
+           -o-transition: width .5s linear, max-width .5s linear, opacity .5s linear;
+              transition: width .5s linear, max-width .5s linear, opacity .5s linear;
       opacity: 0;
       margin: 0 auto;
       height: 0;

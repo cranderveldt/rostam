@@ -111,17 +111,17 @@
     </div>
   </section>
   <section class="page-tile blog col-2 row-2">
-    <div class="preview">blog preview</div>
+    <div class="preview">Clicking on the blog would move to a new page</div>
     <div class="content">
       <div class="controls">Back</div>
-      blog content
+      This new page would look similar to the detail views of the other pages, however it would need to be a new URL to function as a blog normally does.
     </div>
   </section>
   <section class="page-tile contact col-3 row-2">
-    <div class="preview">contact preview</div>
+    <div class="preview">Conctact page could be either a separate page or a view here</div>
     <div class="content">
       <div class="controls">Back</div>
-      contact content
+      Depending on what kind of technology/plugin we go with.
     </div>
   </section>
 </div>

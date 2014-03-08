@@ -5,6 +5,6 @@ jQuery(document).ready(function($){
   });
   $('.controls').on('click', function(){
     console.log('what');
-    $(this).parent().parent().toggleClass('active').css('z-index', 1).siblings().css('z-index', 1);
+    $(this).parent().parent().toggleClass('active').css('z-index', 2).siblings().css('z-index', 1);
   });
 });
