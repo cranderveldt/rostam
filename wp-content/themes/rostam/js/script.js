@@ -7,4 +7,7 @@ jQuery(document).ready(function($){
     console.log('what');
     $(this).parent().parent().toggleClass('active').css('z-index', 2).siblings().css('z-index', 1);
   });
+  setTimeout(function(){
+    $('.v-line, .h-line').addClass('extend');
+  }, 1000);
 });

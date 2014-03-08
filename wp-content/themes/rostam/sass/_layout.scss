@@ -1,9 +1,8 @@
 body {
-  background: #DDD;
+  background: #FFF;
   color: #222;
 }
 #wrapper {
-
 }
 #header, #sidebar, #comments, #footer, .page > header {
   display: none;
@@ -31,16 +30,11 @@ body {
     width: 33.3333%;
     height: 50%;
     background: #DDD;
+    text-align: center;
     -webkit-transition: width .5s linear, height .5s linear, top .5s linear, left .5s linear;
        -moz-transition: width .5s linear, height .5s linear, top .5s linear, left .5s linear;
          -o-transition: width .5s linear, height .5s linear, top .5s linear, left .5s linear;
             transition: width .5s linear, height .5s linear, top .5s linear, left .5s linear;
-    &:nth-child(2n) {
-      background: #d1d1d1;
-      .content {
-        background: #DDD;
-      }
-    }
     .content {
       @include transition(width, .2s);
       @include transition(max-width, .2s);
@@ -53,8 +47,12 @@ body {
       margin: 0 auto;
       height: 0;
       overflow: hidden;
+      text-align: left;
       @include max-width(600px);
-      background: #d1d1d1;
+      background: #FFF;
+    }
+    .preview {
+      text-align: center;
     }
     .controls {
       cursor: pointer;
@@ -65,6 +63,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
+      border: 0;
       width: 100%;
       min-height: 100%;
       height: auto;
@@ -76,6 +75,61 @@ body {
         padding: 30px;
         height: auto;
       }
+    }
+  }
+}
+.decor {
+  .v-line, .h-line {
+    position: absolute;
+    background: #FFF;
+    z-index: 5;
+    -webkit-transition: width 1s linear, height 1s linear, opacity .5s linear;
+       -moz-transition: width 1s linear, height 1s linear, opacity .5s linear;
+         -o-transition: width 1s linear, height 1s linear, opacity .5s linear;
+            transition: width 1s linear, height 1s linear, opacity .5s linear;
+  }
+  .h-line {
+    height: 8px;
+    left: 0;
+    width: 0%;
+    opacity: 0;
+    &.top {
+      top: 0;
+    }
+    &.middle {
+      margin-top: -4px;
+      top: 50%;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+    &.extend {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  .v-line {
+    width: 8px;
+    top: 0;
+    height: 0%;
+    opacity: 0;
+    &.left-middle {
+      left: 33.3333%;
+      margin-left: -4px;
+    }
+    &.right-middle {
+      left: 66.6666%;
+      margin-left: -4px;
+    }
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+    &.extend {
+      height: 100%;
+      opacity: 1;
     }
   }
 }
