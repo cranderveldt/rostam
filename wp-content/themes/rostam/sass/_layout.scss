@@ -198,7 +198,8 @@ body {
     }
   }
   .home {
-    background: $red url('imgs/logo.png') center center no-repeat;
+    background: $red url('imgs/logo-white.png') center center no-repeat;
+    background-image: url('imgs/logo-white.svg'), none;
     color: #FFF;
   }
 }
