@@ -8,7 +8,7 @@ body {
 }
 body, select, input, button, label {
   font-weight: 400;
-  font-family: $title;
+  font-family: $body;
   -webkit-font-smoothing: antialiased;
   &:focus {
     outline: none;
@@ -18,39 +18,49 @@ h1, h2, h3, h4, h5, h6, .h0, .h1, .h2, .h3, .h4, .h5, .h6, .h7 {
   font-family: $title;
   font-weight: 700;
   line-height: 1.3;
-  margin: 0 0 15px;
 }
 .h0 {
   @include font-size($h3-size...);
+    margin: 0 0 15px;
   @include above-width($mobile) {
     @include font-size($h2-size...);
+    margin: 0 0 20px;
   }
   @include above-width($tablet) {
     @include font-size($h0-size...);
+    margin: 0 0 30px;
   }
 }
 .h1, .base h1 {
   @include font-size($h3-size...);
+    margin: 0 0 15px;
   @include above-width($mobile) {
     @include font-size($h2-size...);
+    margin: 0 0 20px;
   }
   @include above-width($tablet) {
     @include font-size($h1-size...);
+    margin: 0 0 30px;
   }
 }
 .h2, .base h2 {
   @include font-size($h4-size...);
+    margin: 20px 0 15px;
   @include above-width($mobile) {
     @include font-size($h3-size...);
+    margin: 30px 0 20px;
   }
   @include above-width($tablet) {
     @include font-size($h2-size...);
+    margin: 40px 0 30px;
   }
 }
 .h3, .base h3 {
   @include font-size($h4-size...);
+  margin: 20px 0 15px;
   @include above-width($tablet) {
     @include font-size($h3-size...);
+    margin: 30px 0 15px;
   }
 }
 .h4, .base h4 {
@@ -91,10 +101,7 @@ blockquote {
   }
 }
 p {
-  @include font-size(16);
-  @include above-width($mobile) {
-    @include font-size(20);
-  }
+  @include font-size(20);
   @include above-width($tablet) {
     @include font-size;
   }

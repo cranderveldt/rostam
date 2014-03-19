@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( ' | ', true, 'right' ); ?></title>
 <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fanwood+Text:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 <?php wp_head(); ?>
 <script src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
