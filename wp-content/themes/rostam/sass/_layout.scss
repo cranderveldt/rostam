@@ -335,6 +335,9 @@ body {
       text-align: center;
       cursor: pointer;
     }
+    &.c3-up .inner-menu-item {
+      width: 33.3333%;
+    }
   }
   .inner-nav-content {
     // margin-bottom: 30px;
@@ -345,6 +348,25 @@ body {
       width: 740px;
     }
     background: #FFF;
+  }
+}
+#cntctfrm_contact_form {
+  @include max-width(400px);
+  label {
+    font-family: $title;
+    margin-top: 20px;
+  }
+  #{$all-text-inputs}, textarea {
+    @extend .form-control;
+    width: 100% !important;
+  }
+  input[type=submit] {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .btn-lg;
+    font-weight: bold;
+    font-family: $sans;
+    margin-top: 20px;
   }
 }
 #footer {
