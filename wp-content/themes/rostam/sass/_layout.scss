@@ -8,14 +8,14 @@ body {
 // add squares on interior pages for the nav! right hand side
 #container {
   @include max-width(800px);
-  margin: 5px auto 0;
+  margin: 0 auto 0;
   background: #FFF;
   position: relative;
   padding: 15px;
   @include above-width($tablet) {
     padding: 30px;
   }
-  @include above-width(925px) {
+  @include above-width(1110px) {
     margin-top: 30px;
   }
   .home & {
@@ -39,12 +39,11 @@ body {
   }
 }
 .menu-main-menu-container {
-  height: 50px;
   text-align: center;
   @include above-width(800px) {
     text-align: left;
   }
-  @include above-width(925px) {
+  @include above-width(1110px) {
     height: auto;
     width: 50px;
     position: absolute;
@@ -54,29 +53,74 @@ body {
   .menu {
     @extend .list-unstyled;
     margin: 0;
+    @extend .clearfix;
     li {
-      @include inline-block(middle);
+      display: block;
+      float: left;
+      width: 50%;
+      &:nth-child(odd) {
+        padding: 0 2px 0 5px;
+      }
+      &:nth-child(even) {
+        padding: 0 5px 0 3px;
+      }
+      @include above-width($mobile) {
+        @include inline-block(middle);
+        float: none;
+        width: auto;
+        &:nth-child(odd) {
+          padding: 0;
+        }
+        &:nth-child(even) {
+          padding: 0;
+        }
+      }
     }
     a {
       display: block;
-      background: 50px;
       height: 50px;
       background: #FFF;
       text-align: center;
       padding: 13px;
-      @include inline-block(middle);
-      @include above-width(925px) {
+      position: relative;
+      margin-bottom: 5px;
+      @include above-width(1110px) {
         display: block;
         margin-bottom: 5px;
       }
       i {
-        display: block;
+        display: inline;
         @include font-size(24, 1);
         width: 24px;
         height: 24px;
+        margin-right: 5px;
+        @include above-width(1110px) {
+          display: block;
+          margin: 0;
+        }
+      }
+      span {
+        @include font-size(16, 1);
+        font-family: $title;
+        position: relative;
+        top: -2px;
+        @include above-width(1110px) {
+          color: $red;
+          display: none;
+          position: absolute;
+          right: -98px;
+          top: 18px;
+          width: 90px;
+          text-align: left;
+        }
       }
       &:hover {
         text-decoration: none;
+        span {
+          @include above-width(1110px) {
+            display: block;
+          }
+        }
       }
     }
     .current-menu-item a {

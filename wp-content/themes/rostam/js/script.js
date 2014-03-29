@@ -24,7 +24,8 @@ jQuery(document).ready(function($){
     }, 1000);
   } else {
     $('#menu-main-menu li a').each(function(){
-      $(this).html('<i class="fa fa-' + $(this).prop('title') + '"></i>')
+      var $this = $(this);
+      $this.html('<i class="fa fa-' + $(this).prop('title') + '"></i><span>' + $this.text() + '</span>')
     });
     $('.inner-menu-item').on('click', function(){
       // var $target = $('.nav-item-index-' + $(this).data('index'));
