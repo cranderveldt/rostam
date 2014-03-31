@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <section id="content" role="main">
+<img src="http://www.placehold.it/920x200" class="banner">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'entry' ); ?>
 <?php comments_template(); ?>

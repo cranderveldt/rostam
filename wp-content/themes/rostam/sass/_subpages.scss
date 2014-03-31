@@ -1,0 +1,27 @@
+.blog {
+  .entry-footer {
+    margin: 0 -15px 15px;
+    border-bottom: 8px solid #DDD;
+    padding-bottom: 15px;
+    @include above-width($tablet) {
+      margin: 0 -30px 30px;
+      padding-bottom: 30px;
+    }
+    & > * {
+      display: none;
+    }
+  }
+  .post > header {
+    margin-bottom: 20px;
+    h2 {
+      margin: 0 0 5px;
+    }
+    .entry-meta {
+      @include font-size(20, 1);
+      font-style: italic;
+    }
+    .post-edit-link, .author, .meta-sep {
+      display: none;
+    }
+  }
+}
