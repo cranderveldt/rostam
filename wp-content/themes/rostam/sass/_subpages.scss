@@ -1,4 +1,4 @@
-.blog {
+.blog, .single {
   .entry-footer {
     margin: 0 -15px 15px;
     border-bottom: 8px solid #DDD;
@@ -24,4 +24,7 @@
       display: none;
     }
   }
+}
+#nav-below {
+  display: none;
 }
