@@ -132,17 +132,13 @@ body {
 .tiles-wrap {
   position: relative;
   width: auto;
-  max-width: 600px;
+  max-width: 500px;
   margin: 8px auto 0;
-  @include above-width(600px) {
+  @include above-width(750px) {
     margin-top: 30px;
     max-width: none;
-    width: 600px;
-    height: 900px;
-  }
-  @include above-width(900px) {
-    width: 900px;
-    height: 600px;
+    width: 750px;
+    height: 750px;
   }
   .subpage & {
     position: static;
@@ -150,59 +146,17 @@ body {
 }
 .tiles {
   @extend .clearfix;
-  @include above-width(600px) {
-    .home {
-      left: 0;
-      top: 0;
-    }
-    .who-we-are {
-      top: 0;
-      left: 300px;
-    }
-    .what-we-do {
-      left: 0;
-      top: 300px;
-    }
-    .attorneys {
-      left: 300px;
-      top: 300px;
-    }
-    .blog {
-      left: 0;
-      top: 600px;
-    }
-    .contact {
-      left: 300px;
-      top: 600px;
-    }
-  }
-  @include above-width(900px) {
-    .col-1 {
-      left: 0;
-    }
-    .col-2 {
-      left: 300px;
-    }
-    .col-3 {
-      left: 600px;
-    }
-    .row-1 {
-      top: 0;
-    }
-    .row-2 {
-      top: 300px;
-    }
-  }
+  
   .page-tile {
     padding: 85px 30px 30px;
-    height: 300px;
+    height: 250px;
     background: #DDD;
     text-align: center;
     display: block;
     color: $red;
     border-bottom: 8px solid #FFF;
-    @include above-width(600px) {
-      width: 300px;
+    @include above-width(750px) {
+      width: 250px;
       position: absolute;
       border: 0;
     }
@@ -249,6 +203,34 @@ body {
       }
     }
   }
+  @include above-width(750px) {
+    .main-box {
+      left: 0;
+      top: 0;
+      width: 500px;
+      height: 500px;
+    }
+    .sidebox-1 {
+      top: 0;
+      left: 500px;
+    }
+    .sidebox-2 {
+      top: 250px;
+      left: 500px;
+    }
+    .lowerbox-1 {
+      top: 500px;
+      left: 0;
+    }
+    .lowerbox-2 {
+      top: 500px;
+      left: 250px;
+    }
+    .lowerbox-3 {
+      top: 500px;
+      left: 500px;
+    }
+  }
   .home {
     background: $red url('imgs/logo-white.png') center 90px no-repeat;
     background-image: url('imgs/logo-white.svg'), none;
@@ -265,7 +247,7 @@ body {
 
 .decor {
   display: none;
-  @include above-width(600px) {
+  @include above-width(500px) {
     display: block;
   }
   .v-line, .h-line {
@@ -278,84 +260,56 @@ body {
             transition: width 1s linear, height 1s linear, opacity .5s linear;
   }
   .h-line {
-    width: 8px;
-    top: 0;
-    height: 0%;
-    &.middle {
-      margin-left: -4px;
-      left: 50%;
-    }
-    &.extend {
-      height: 100%;
-      opacity: 1;
-    }
-    @include above-width(900px) {
+    @include above-width(750px) {
       height: 8px;
-      left: 0;
       width: 0%;
       opacity: 0;
       top: auto;
-      &.top {
-        top: 0;
-      }
-      &.middle {
-        margin-left: 0;
+      &.long {
+        top: 66.6666%;
         left: 0;
+        &.extend {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+      &.short {
+        margin-left: 0;
+        left: 66.6666%;
         margin-top: -4px;
-        top: 50%;
-      }
-      &.bottom {
-        bottom: 0;
-      }
-      &.extend {
-        width: 100%;
-        height: 8px;
+        top: 33.3333%;
+        &.extend {
+          opacity: 1;
+          width: 33.3333%;
+        }
       }
     }
   }
   .v-line {
-    height: 8px;
-    left: 0;
-    width: 0%;
-    &.left-middle {
-      top: 33.3333%;
-      margin-top: -4px;
-    }
-    &.right-middle {
-      top: 66.6666%;
-      margin-top: -4px;
-    }
-    &.extend {
-      width: 100%;
-      opacity: 1;
-    }
-    @include above-width(900px) {
+    @include above-width(750px) {
       left: auto;
       width: 8px;
-      top: 0;
       height: 0%;
       opacity: 0;
-      &.left-middle {
-        left: 33.3333%;
+      &.long {
         top: 0;
-        margin-top: 0;
-        margin-left: -4px;
-      }
-      &.right-middle {
         left: 66.6666%;
-        top: 0;
         margin-top: 0;
         margin-left: -4px;
+        &.extend {
+          opacity: 1;
+          height: 100%;
+        }
       }
-      &.left {
-        left: 0;
-      }
-      &.right {
-        right: 0;
-      }
-      &.extend {
-        width: 8px;
-        height: 100%;
+      &.short {
+        left: 33.3333%;
+        top: 66.6666%;
+        margin-top: 0;
+        margin-left: -4px;
+        &.extend {
+          opacity: 1;
+          height: 33.3333%;
+        }
       }
     }
   }
