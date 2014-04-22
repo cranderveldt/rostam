@@ -133,7 +133,7 @@ body {
   position: relative;
   width: auto;
   max-width: 500px;
-  margin: 8px auto 0;
+  margin: 8px auto 30px;
   @include above-width(750px) {
     margin-top: 30px;
     max-width: none;
@@ -148,12 +148,12 @@ body {
   @extend .clearfix;
   
   .page-tile {
-    padding: 85px 30px 30px;
+    padding: 110px 30px 30px;
     height: 250px;
     background: #DDD;
     text-align: center;
     display: block;
-    color: $red;
+    color: #FFF;
     border-bottom: 8px solid #FFF;
     @include above-width(750px) {
       width: 250px;
@@ -162,15 +162,20 @@ body {
     }
     &:hover {
       text-decoration: none;
-      color: $red;
+      color: #FFF;
+      h3 {
+        text-shadow: 0 0 10px rgba(0,0,0,1);
+      }
     }
     h3 {
       margin: 0 0 15px;
       @include font-size(36, 1);
+      text-shadow: 0 0 10px rgba(0,0,0,.5);
     }
     i {
       @include font-size(70, 1);
       margin-bottom: 10px;
+      display: none;
     }
     p {
       @include font-size(20, 1.2);
@@ -238,6 +243,9 @@ body {
     padding-top: 150px;
     &:hover {
       color: #FFF;
+      h3 {
+        text-shadow: none;
+      }
     }
     h2 {
       @include font-size(21, 1);
@@ -246,10 +254,31 @@ body {
       @include font-size(66, 1.1);
       text-transform: uppercase;
       margin-top: 110px;
+      text-shadow: none;
       span {
         @include font-size(87, 1.1);
       }
     }
+  }
+  .who-we-are {
+    background: transparent url('imgs/photos/photo-1-square.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .what-we-do {
+    background: transparent url('imgs/photos/photo-2-square.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .attorneys {
+    background: transparent url('imgs/photos/photo-3-square.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .blog {
+    background: transparent url('imgs/photos/photo-5-square.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .contact {
+    background: transparent url('imgs/photos/photo-6-square.jpg') center center no-repeat;
+    background-size: cover;
   }
 }
 
@@ -327,6 +356,33 @@ body {
   @include max-width(800px);
   @include above-width($tablet) {
     margin: -30px -30px 20px;
+  }
+}
+.title-banner {
+  height: 300px;
+  padding: 200px 20px 20px;
+  h1 {
+    color: #FFF;
+  }
+  &.who-we-are {
+    background: transparent url('imgs/photos/photo-1.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  &.what-we-do {
+    background: transparent url('imgs/photos/photo-2.jpg') center bottom no-repeat;
+    background-size: cover;
+  }
+  &.attorneys {
+    background: transparent url('imgs/photos/photo-3.jpg') center bottom no-repeat;
+    background-size: cover;
+  }
+  &.blog {
+    background: transparent url('imgs/photos/photo-5.jpg') center 94% no-repeat;
+    background-size: cover;
+  }
+  &.contact {
+    background: transparent url('imgs/photos/photo-6.jpg') center 85% no-repeat;
+    background-size: cover;
   }
 }
 .inner-nav {
