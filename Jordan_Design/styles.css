@@ -1,0 +1,84 @@
+.cf:before,
+.cf:after {
+  content: " "; /* 1 /
+  display: table; / 2 */
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.logo {
+  height: 72px;
+  background-image: url("img/logo-red.png");
+  background-repeat: no-repeat;
+}
+
+.img{
+  background: transparent url() center center no-repeat; 
+  background-size: cover;
+}
+
+.who-we-are {
+  background-image: url("img/photo-1-cropped.jpg");
+  margin: 0 10px 0 0;
+}
+
+.what-we-do {
+  background-image: url("img/photo-2-cropped.jpg");
+  margin: 0 10px 0 0;
+}
+
+.attourneys {
+  background-image: url("img/photo-3-cropped.jpg");
+  margin: 0 10px 0 0;
+}
+
+.blog {
+  background-image: url("img/photo-5-cropped.jpg");
+  margin: 0 10px 0 0;
+}
+
+.contact {
+  background-image: url("img/photo-6-cropped.jpg");
+}
+
+.column { 
+  width: 20%;
+  float: left; 
+  height: 400px; 
+  width: 200px;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
