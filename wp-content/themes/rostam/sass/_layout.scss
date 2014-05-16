@@ -5,7 +5,11 @@ body {
     background: #FFF;
   }
 }
-// add squares on interior pages for the nav! right hand side
+.fixed {
+  @include max-width(1000px);
+  margin: 0 auto 0;
+  position: relative;
+}
 #container {
   @include max-width(800px);
   margin: 0 auto 0;
@@ -348,6 +352,114 @@ body {
           height: 33.3333%;
         }
       }
+    }
+  }
+}
+.home-header {
+  background: $red;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  color: #FFF;
+  .home-logo {
+    background: transparent url('imgs/logo-white.png') center center no-repeat;
+    background-image: url('imgs/logo-white.svg'), none;
+    display: block;
+    width: 215px;
+    height: 72px;
+    text-indent: -9999%;
+    font-size: 0;
+  }
+  p {
+    margin: 0;
+  }
+  .tagline {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    h2 {
+      @include font-size(36, 1);
+    }
+  }
+}
+.page-thumbs {
+  @include max-width(1000px);
+  margin: auto;
+  .img {
+    display: block;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      overflow: visible;
+      h2 {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(0,0,0,.7);
+      }
+    }
+    h2 {
+      @include font-size(90, 1);
+      font-weight: 900;
+      font-style: italic;
+      white-space: nowrap;
+      position: absolute;
+      left: 5px;
+      color: #FFF;
+      opacity: .8;
+      margin: 0;
+      padding-right: 20px;
+    }
+    h3 {
+      @include font-size(28, 1);
+      color: #FFF;
+      font-weight: 700;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,.5);
+      padding: 10px 0;
+      margin: 0;
+    }
+  }
+  .who-we-are {
+    background: transparent url('imgs/photos/photo-1.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 6;
+    h2 {
+      top: 0;
+    }
+  }
+  .what-we-do {
+    background: transparent url('imgs/photos/photo-2.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 5;
+    h2 {
+      top: 75px;
+    }
+  }
+  .attorneys {
+    background: transparent url('imgs/photos/photo-10.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 4;
+    h2 {
+      top: 150px;
+    }
+  }
+  .contact {
+    background: transparent url('imgs/photos/photo-6.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 3;
+    h2 {
+      top: 225px;
+    }
+  }
+  .blog {
+    background: transparent url('imgs/photos/photo-5.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 2;
+    h2 {
+      top: 300px;
     }
   }
 }
