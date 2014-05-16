@@ -358,6 +358,25 @@ body {
     margin: -30px -30px 20px;
   }
 }
+.people-banner {
+  height: 500px;
+  &.carlos {
+    background: transparent url('imgs/photos/people-mark.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  &.michael {
+    background: transparent url('imgs/photos/people-mark.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  &.christopher {
+    background: transparent url('imgs/photos/people-mark.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  &.matthew {
+    background: transparent url('imgs/photos/people-matt.jpg') center center no-repeat;
+    background-size: cover;
+  }
+}
 .title-banner {
   height: 300px;
   padding: 200px 20px 20px;
@@ -433,6 +452,13 @@ body {
         color: $red;
       }
     }
+  }
+}
+.people-listing {
+  margin: 20px 0 0;
+  h3 {
+    @include font-size(18, 1);
+    text-align: center;
   }
 }
 #cntctfrm_contact_form {
