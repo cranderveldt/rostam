@@ -368,14 +368,25 @@ body {
     height: 72px;
     text-indent: -9999%;
     font-size: 0;
+    margin: auto;
+    @include above-width($tablet) {
+      margin: 0
+    }
   }
   p {
     margin: 0;
+    text-align: center;
+    @include above-width($tablet) {
+      text-align: left;
+    }
   }
   .tagline {
-    position: absolute;
-    right: 0;
-    top: 15px;
+    text-align: center;
+    @include above-width($tablet) {
+      position: absolute;
+      right: 0;
+      top: 15px;
+    }
     h2 {
       @include font-size(36, 1);
     }
@@ -389,6 +400,10 @@ body {
     height: 400px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
+    @include above-width($tablet) {
+      margin-bottom: 0;
+    }
     &:hover {
       overflow: visible;
       h2 {
@@ -431,7 +446,7 @@ body {
     }
   }
   .what-we-do {
-    background: transparent url('imgs/photos/photo-2.jpg') center center no-repeat;
+    background: transparent url('imgs/photos/photo-11.jpg') center center no-repeat;
     background-size: cover;
     z-index: 5;
     h2 {
@@ -439,7 +454,7 @@ body {
     }
   }
   .attorneys {
-    background: transparent url('imgs/photos/photo-10.jpg') center center no-repeat;
+    background: transparent url('imgs/photos/people-mark.jpg') center center no-repeat;
     background-size: cover;
     z-index: 4;
     h2 {
@@ -460,6 +475,23 @@ body {
     z-index: 2;
     h2 {
       top: 300px;
+    }
+  }
+  @include above-width($tablet) {
+    .who-we-are {
+      background-position: 30% center;
+    }
+    .what-we-do {
+      background-position: left center;
+    }
+    .attorneys {
+      background-position: 46% center;
+    }
+    .blog {
+      background-position: 7% center;
+    }
+    .contact {
+      background-position: 9% center;
     }
   }
 }
@@ -500,7 +532,7 @@ body {
     background-size: cover;
   }
   &.what-we-do {
-    background: transparent url('imgs/photos/photo-2.jpg') center bottom no-repeat;
+    background: transparent url('imgs/photos/photo-11.jpg') center bottom no-repeat;
     background-size: cover;
   }
   &.attorneys {
