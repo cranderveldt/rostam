@@ -606,7 +606,6 @@ body {
   }
 }
 #cntctfrm_contact_form {
-  @include max-width(400px);
   label {
     font-family: $title;
     margin-top: 20px;
@@ -624,6 +623,17 @@ body {
     margin-top: 20px;
   }
 }
+.contact-address {
+  padding-top: 30px;
+  p {
+    @include font-size(20);
+  }
+  h4 {
+    @include font-size(18);
+    margin: 0 0 10px;
+    font-weight: bold;
+  }
+}
 #footer {
   @include max-width(800px);
   margin: 0 auto 30px;
@@ -635,5 +645,12 @@ body {
   color: #AAA;
   .home & {
     display: none;
+  }
+  a {
+    color: #666;
+    margin-left: 5px;
+    &:hover {
+      color: #333;
+    }
   }
 }
