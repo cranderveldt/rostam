@@ -34,6 +34,11 @@ body {
 #branding, #search, #sidebar, #comments, .page > header {
   display: none;
 }
+.page {
+  br {
+    display: none;
+  }
+}
 #header {
   @include max-width(800px);
   position: relative;
