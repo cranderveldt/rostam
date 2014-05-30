@@ -181,6 +181,9 @@ body {
 .page-thumbs {
   @include max-width(1000px);
   margin: auto;
+  p {
+    display: none;
+  }
   .img {
     display: block;
     height: 400px;
