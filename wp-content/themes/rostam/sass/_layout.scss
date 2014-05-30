@@ -42,11 +42,6 @@ body {
     display: none;
   }
 }
-.home {
-  #disqus_thread {
-    display: none;
-  }
-}
 .menu-main-menu-container {
   text-align: center;
   @include above-width(800px) {
@@ -139,13 +134,15 @@ body {
   }
 }
 .home-header {
-  background: $red;
-  padding: 20px 0;
-  margin-bottom: 20px;
-  color: #FFF;
+  .branding {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0 10px;
+    margin-bottom: 30px;
+    color: #000;
+  }
   .home-logo {
-    background: transparent url('imgs/logo-white.png') center center no-repeat;
-    background-image: url('imgs/logo-white.svg'), none;
+    background: transparent url('imgs/logo-red.png') center center no-repeat;
+    background-image: url('imgs/logo-red.svg'), none;
     display: block;
     width: 215px;
     height: 72px;
@@ -165,6 +162,7 @@ body {
   }
   .tagline {
     text-align: center;
+    display: none;
     @include above-width($tablet) {
       position: absolute;
       right: 0;
