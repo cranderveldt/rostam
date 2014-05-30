@@ -133,228 +133,6 @@ body {
     }
   }
 }
-.tiles-wrap {
-  position: relative;
-  width: auto;
-  max-width: 500px;
-  margin: 8px auto 30px;
-  @include above-width(750px) {
-    margin-top: 30px;
-    max-width: none;
-    width: 750px;
-    height: 750px;
-  }
-  .subpage & {
-    position: static;
-  }
-}
-.tiles {
-  @extend .clearfix;
-  
-  .page-tile {
-    padding: 110px 30px 30px;
-    height: 250px;
-    background: #DDD;
-    text-align: center;
-    display: block;
-    color: #FFF;
-    border-bottom: 8px solid #FFF;
-    @include above-width(750px) {
-      width: 250px;
-      position: absolute;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: #FFF;
-      h3 {
-        text-shadow: 0 0 10px rgba(0,0,0,1);
-      }
-    }
-    h3 {
-      margin: 0 0 15px;
-      @include font-size(36, 1);
-      text-shadow: 0 0 10px rgba(0,0,0,.5);
-    }
-    i {
-      @include font-size(70, 1);
-      margin-bottom: 10px;
-      display: none;
-    }
-    p {
-      @include font-size(20, 1.2);
-      color: #000;
-    }
-    .preview {
-      text-align: center;
-    }
-    .controls {
-      cursor: pointer;
-    }
-    &.active {
-      padding: 0;
-      float: none;
-      position: absolute;
-      background: #FFF;
-      top: 0;
-      left: 0;
-      border: 0;
-      width: 100%;
-      min-height: 100%;
-      height: auto;
-      .preview {
-        display: none;
-      }
-      .content {
-        opacity: 1;
-        padding: 30px;
-        height: auto;
-      }
-    }
-  }
-  @include above-width(750px) {
-    .main-box {
-      left: 0;
-      top: 0;
-      width: 500px;
-      height: 500px;
-    }
-    .sidebox-1 {
-      top: 0;
-      left: 500px;
-    }
-    .sidebox-2 {
-      top: 250px;
-      left: 500px;
-    }
-    .lowerbox-1 {
-      top: 500px;
-      left: 0;
-    }
-    .lowerbox-2 {
-      top: 500px;
-      left: 250px;
-    }
-    .lowerbox-3 {
-      top: 500px;
-      left: 500px;
-    }
-  }
-  .home {
-    background: $red url('imgs/logo-white.png') center 90px no-repeat;
-    background-image: url('imgs/logo-white.svg'), none;
-    color: #FFF;
-    padding-top: 150px;
-    &:hover {
-      color: #FFF;
-      h3 {
-        text-shadow: none;
-      }
-    }
-    h2 {
-      @include font-size(21, 1);
-    }
-    h3 {
-      @include font-size(66, 1.1);
-      text-transform: uppercase;
-      margin-top: 110px;
-      text-shadow: none;
-      span {
-        @include font-size(87, 1.1);
-      }
-    }
-  }
-  .who-we-are {
-    background: transparent url('imgs/photos/photo-1-square.jpg') center center no-repeat;
-    background-size: cover;
-  }
-  .what-we-do {
-    background: transparent url('imgs/photos/photo-2-square.jpg') center center no-repeat;
-    background-size: cover;
-  }
-  .attorneys {
-    background: transparent url('imgs/photos/photo-3-square.jpg') center center no-repeat;
-    background-size: cover;
-  }
-  .blog {
-    background: transparent url('imgs/photos/photo-5-square.jpg') center center no-repeat;
-    background-size: cover;
-  }
-  .contact {
-    background: transparent url('imgs/photos/photo-6-square.jpg') center center no-repeat;
-    background-size: cover;
-  }
-}
-
-.decor {
-  display: none;
-  @include above-width(500px) {
-    display: block;
-  }
-  .v-line, .h-line {
-    position: absolute;
-    background: #FFF;
-    z-index: 5;
-    -webkit-transition: width 1s linear, height 1s linear, opacity .5s linear;
-       -moz-transition: width 1s linear, height 1s linear, opacity .5s linear;
-         -o-transition: width 1s linear, height 1s linear, opacity .5s linear;
-            transition: width 1s linear, height 1s linear, opacity .5s linear;
-  }
-  .h-line {
-    @include above-width(750px) {
-      height: 8px;
-      width: 0%;
-      opacity: 0;
-      top: auto;
-      &.long {
-        top: 66.6666%;
-        left: 0;
-        &.extend {
-          width: 100%;
-          opacity: 1;
-        }
-      }
-      &.short {
-        margin-left: 0;
-        left: 66.6666%;
-        margin-top: -4px;
-        top: 33.3333%;
-        &.extend {
-          opacity: 1;
-          width: 33.3333%;
-        }
-      }
-    }
-  }
-  .v-line {
-    @include above-width(750px) {
-      left: auto;
-      width: 8px;
-      height: 0%;
-      opacity: 0;
-      &.long {
-        top: 0;
-        left: 66.6666%;
-        margin-top: 0;
-        margin-left: -4px;
-        &.extend {
-          opacity: 1;
-          height: 100%;
-        }
-      }
-      &.short {
-        left: 33.3333%;
-        top: 66.6666%;
-        margin-top: 0;
-        margin-left: -4px;
-        &.extend {
-          opacity: 1;
-          height: 33.3333%;
-        }
-      }
-    }
-  }
-}
 .home-header {
   background: $red;
   padding: 20px 0;
@@ -470,7 +248,7 @@ body {
     }
   }
   .blog {
-    background: transparent url('imgs/photos/photo-5.jpg') center center no-repeat;
+    background: transparent url('imgs/photos/photo-12.jpg') center center no-repeat;
     background-size: cover;
     z-index: 2;
     h2 {
@@ -488,7 +266,7 @@ body {
       background-position: 46% center;
     }
     .blog {
-      background-position: 7% center;
+      background-position: 40% center;
     }
     .contact {
       background-position: 9% center;
@@ -505,7 +283,7 @@ body {
 .people-banner {
   height: 500px;
   &.carlos {
-    background: transparent url('imgs/photos/people-mark.jpg') center center no-repeat;
+    background: transparent url('imgs/photos/people-carlos.jpg') center center no-repeat;
     background-size: cover;
   }
   &.michael {
@@ -513,7 +291,7 @@ body {
     background-size: cover;
   }
   &.christopher {
-    background: transparent url('imgs/photos/people-mark.jpg') center center no-repeat;
+    background: transparent url('imgs/photos/people-christopher.jpg') center center no-repeat;
     background-size: cover;
   }
   &.matthew {
@@ -540,12 +318,27 @@ body {
     background-size: cover;
   }
   &.blog {
-    background: transparent url('imgs/photos/photo-5.jpg') center 94% no-repeat;
+    background: transparent url('imgs/photos/photo-12.jpg') center 60% no-repeat;
     background-size: cover;
   }
   &.contact {
     background: transparent url('imgs/photos/photo-6.jpg') center 85% no-repeat;
     background-size: cover;
+  }
+  &.pm-engagement {
+    background: transparent url('imgs/photos/photo-13.jpg') center 80% no-repeat;
+    background-size: cover;
+    padding-top: 130px;
+    h1 {
+      text-shadow: 0 0 20px rgba(0,0,0,.5);
+    }
+  }
+  &.a-engagement {
+    background: transparent url('imgs/photos/photo-8.jpg') center bottom no-repeat;
+    background-size: cover;
+    h1 {
+      text-shadow: 0 0 20px rgba(0,0,0,.5);
+    }
   }
 }
 .inner-nav {
